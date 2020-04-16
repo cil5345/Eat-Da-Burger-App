@@ -8,13 +8,13 @@ const burger = {
         });
     },
     insertOne: function (col, val, cb) {
-        orm.selectAll("burgers", col, val, function (res) {
+        orm.insertOne("burgers", col, val, function (res) {
             cb(res)
             // console.log(res);
         });
     },
     updateOne: function (col, val, colSearch, valOfCol, cb) {
-        orm.selectAll("burgers", col, val, colSearch, valOfCol, function (res) {
+        orm.updateOne("burgers", col, val, colSearch, valOfCol, function (res) {
             cb(res)
             // console.log(res);
         });
